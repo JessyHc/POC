@@ -27,6 +27,7 @@ private api : string = environment.apiURL;
 
   getProducts(){
       console.log('Test Call');
-      return this.httpClient.get<Product[]>(this.api+'/products');
+      //return this.httpClient.get<Product[]>(this.api+'/products');
+      return this.httpClient.get<Product[]>('http://localhost:8080/products');
   }
 }
